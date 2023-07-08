@@ -1,4 +1,4 @@
-use serde::{Serialize, Deserialize};
+use serde::{Deserialize, Serialize};
 
 #[my_no_sql_macros::my_no_sql_entity("productfeatures")]
 #[derive(Serialize, Deserialize, Debug, Clone)]
@@ -15,7 +15,7 @@ pub struct ProductFeatureNoSqlModel {
 }
 
 impl ProductFeatureNoSqlModel {
-    pub fn generate_partition_key() -> &'static str {
-        "pf"
+    pub fn generate_partition_key(product_id: &str) -> String {
+        product_id.to_string()
     }
 }
