@@ -17,10 +17,13 @@ pub struct ProductComponentServiceNoSqlEntity {
     pub feature_id: String,
     pub feature_component_id: String,
     pub description: String,
-    pub k8s_deployment: String,
-    pub docker_deployment: String,
+    pub k8s_deployment: Option<String>,
+    pub docker_deployment: Option<String>,
     pub expose_ip_rule: Option<ExposeIpRule>,
-    pub labels: HashMap<String, String>,
+    pub create_date: u64,
+    pub update_date: u64,
+    pub create_process_id: String,
+    pub update_process_id: String,
 }
 
 impl ProductComponentServiceNoSqlEntity {

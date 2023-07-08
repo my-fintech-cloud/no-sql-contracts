@@ -6,7 +6,6 @@ pub struct CloudProductNoSqlModel {
     pub id: String,
     pub name: String,
     pub description: String,
-    pub last_update_date: String,
     pub create_process_id: String,
     pub last_update_process_id: String,
     pub create_date: u64,
