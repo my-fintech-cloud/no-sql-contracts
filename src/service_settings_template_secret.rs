@@ -8,6 +8,14 @@ pub enum ServiceSettingsTemplateSecretNoSqlModelType {
 }
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
+pub struct ServiceSettingsTemplateSecretInputByClientMetadata{
+    pub datatype: ServiceSettingsTemplateSecretTypeDataType,
+    pub client_secret_name: String,
+    pub client_secret_description: String,
+    pub secret_group: String,
+}
+
+#[derive(Serialize, Deserialize, Debug, Clone)]
 pub enum ServiceSettingsTemplateSecretTypeDataType {
     String,
     Int,
