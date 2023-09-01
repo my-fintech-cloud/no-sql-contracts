@@ -4,7 +4,7 @@ use serde::{Deserialize, Serialize};
 pub enum ServiceSettingsTemplateSecretNoSqlModelType {
     Static(String),
     Generated,
-    InputByClient(ServiceSettingsTemplateSecretTypeDataType),
+    InputByClient(ServiceSettingsTemplateSecretInputByClientMetadata),
 }
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
